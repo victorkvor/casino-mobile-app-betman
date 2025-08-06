@@ -228,13 +228,15 @@ This is the main panel after logging in, where you can navigate to other app scr
 - 🏴‍☠️ A fictional **black market** for purchasing chips.
 - 🪪 Your personal **profile**.
 
-<div align="center"><img src="images/dashboard.jpg" width="300" alt="dashboard"></div>
+<div align="center"><img src="images/dashboard.jpeg" width="300" alt="dashboard"></div>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ---
 
 ###### 🕹️ Casino: Game Modes <a id="game-modes"></a>
+
+<div align="center"><img src="images/games.jpg" width="300" alt="games"></div>
 
 The following gambling games are available within the in-app **casino**, each with its own logic and user interface:
 
