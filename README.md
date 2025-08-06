@@ -51,9 +51,9 @@
     </li>
     <li>
       <a href="#screens">🧱 App Screens</a>
-      <li>
-        <a href="#notifications">🔔 Notifications</a>
-        <a href="#login">🔐 Login</a>
+      <ul>
+        <li><a href="#notifications">🔔 Notifications</a></li>
+        <li><a href="#login">🔐 Login</a></li>
         <li>
           <a href="#dashboard">🏠 Dashboard</a>
           <ul>
@@ -64,7 +64,7 @@
             <li><a href="#profile">🪪 Profile</a></li>
           </ul>
         </li>
-      </li>
+      </ul>
     </li>
     <li><a href="#resources">📚 Resources</a></li>
     <li><a href="#contributing">🤝 Contributing</a></li>
