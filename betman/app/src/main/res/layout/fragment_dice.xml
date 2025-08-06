@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:forceDarkAllowed="false"
+    android:background="@drawable/border_windowv2"
+    android:padding="4dp"
+    tools:context=".Dice"
+    tools:targetApi="q">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dice_header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextSizeCheck">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:shadowColor="@color/neon_acid_green"
+            android:shadowDx="0.0"
+            android:shadowDy="0.0"
+            android:shadowRadius="15"
+            android:text="@string/dice"
+            android:textColor="@color/neon_acid_green"
+            android:fontFamily="@font/gamerock"
+            android:textSize="60sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <TextView
+            android:id="@+id/dice_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/border_money"
+            android:drawablePadding="8dp"
+            android:paddingStart="14dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="14dp"
+            android:paddingBottom="8dp"
+            android:shadowColor="@color/gold_rush"
+            android:shadowDx="0.0"
+            android:shadowDy="0.0"
+            android:shadowRadius="10"
+            android:text=""
+            android:textColor="@color/gold_rush"
+            android:textSize="20sp"
+            android:fontFamily="@font/quickmoney"
+            app:drawableEndCompat="@drawable/image_chips_money"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/dice_settingslayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dice_header">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:shadowColor="@color/neon_acid_green"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10"
+                android:text="@string/bet_amount"
+                android:textColor="@color/neon_acid_green"
+                android:textSize="20sp"
+                android:fontFamily="@font/gameria" />
+
+            <EditText
+                android:id="@+id/dice_betamount"
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:text="100"
+                android:textColor="@color/gold_rush"
+                android:background="@drawable/border_spinner"
+                android:fontFamily="@font/quickmoney"
+                android:paddingEnd="14dp"
+                android:paddingStart="14dp"
+                android:shadowColor="@color/gold_rush"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10"
+                app:drawableEndCompat="@drawable/image_chips_money"
+                tools:ignore="Autofill,DuplicateSpeakableTextCheck,HardcodedText,LabelFor" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:shadowColor="@color/neon_acid_green"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="20"
+                android:text="@string/profit_on_win"
+                android:textColor="@color/neon_acid_green"
+                android:textSize="19sp"
+                android:fontFamily="@font/gameria" />
+
+            <EditText
+                android:id="@+id/dice_earnings"
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+                android:enabled="false"
+                android:gravity="center"
+                android:inputType="none"
+                android:text="200"
+                android:textColor="@color/gold_rush"
+                android:background="@drawable/border_spinnerfill"
+                android:fontFamily="@font/quickmoney"
+                android:paddingEnd="14dp"
+                android:paddingStart="14dp"
+                android:shadowColor="@color/gold_rush"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10"
+                app:drawableEndCompat="@drawable/image_chips_money"
+                tools:ignore="Autofill,HardcodedText,LabelFor" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dice_settingslayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dice_settingslayout">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:shadowColor="@color/neon_acid_green"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="20"
+                android:text="@string/multiplier"
+                android:textColor="@color/neon_acid_green"
+                android:textSize="20sp"
+                android:fontFamily="@font/gameria" />
+
+            <EditText
+                android:id="@+id/dice_mult"
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+                android:enabled="false"
+                android:gravity="center"
+                android:inputType="none"
+                android:text="2"
+                android:textColor="@color/gold_rush"
+                android:background="@drawable/border_spinnerfill"
+                android:fontFamily="@font/quickmoney"
+                android:paddingEnd="14dp"
+                android:paddingStart="14dp"
+                android:shadowColor="@color/gold_rush"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10"
+                tools:ignore="Autofill,HardcodedText,LabelFor" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:shadowColor="@color/neon_acid_green"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="20"
+                android:text="@string/win_chance"
+                android:textColor="@color/neon_acid_green"
+                android:textSize="20sp"
+                android:fontFamily="@font/gameria" />
+
+            <EditText
+                android:id="@+id/dice_winchance"
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+                android:enabled="false"
+                android:focusable="false"
+                android:gravity="center"
+                android:inputType="none"
+                android:text="50 %"
+                android:textColor="@color/gold_rush"
+                android:background="@drawable/border_spinnerfill"
+                android:fontFamily="@font/quickmoney"
+                android:paddingEnd="14dp"
+                android:paddingStart="14dp"
+                android:shadowColor="@color/gold_rush"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10"
+                tools:ignore="Autofill,HardcodedText,LabelFor" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/dice_play"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/border_button_glowred"
+        android:shadowColor="@color/white"
+        android:shadowDx="0.0"
+        android:shadowDy="0.0"
+        android:shadowRadius="20"
+        android:text="@string/play"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        android:fontFamily="@font/playerscollege"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dice_settingslayout2"
+        tools:ignore="TextContrastCheck" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dice_play">
+
+        <!-- Marcas del slider -->
+        <LinearLayout
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="-15dp"
+            android:paddingTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="TextSizeCheck">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:shadowColor="@color/neon_acid_green"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="20"
+                android:text="0"
+                android:textColor="@color/neon_acid_green"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:shadowColor="@color/neon_acid_green"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="20"
+                android:text="25"
+                android:textColor="@color/neon_acid_green"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:shadowColor="@color/neon_acid_green"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="20"
+                android:text="50"
+                android:textColor="@color/neon_acid_green"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:shadowColor="@color/neon_acid_green"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="20"
+                android:text="75"
+                android:textColor="@color/neon_acid_green"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:shadowColor="@color/neon_acid_green"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="20"
+                android:text="100"
+                android:textColor="@color/neon_acid_green"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+
+        <!-- SeekBar personalizado -->
+        <SeekBar
+            android:id="@+id/dice_slider"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:max="100"
+            android:progress="50"
+            android:progressDrawable="@drawable/dice_progress"
+            android:splitTrack="false"
+            android:thumb="@drawable/dice_thumb"
+            android:thumbOffset="8dp" />
+
+        <TextView
+            android:id="@+id/dice_cubo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="-65dp"
+            android:background="@drawable/dice_cube"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <!-- Texto del valor -->
+        <TextView
+            android:id="@+id/dice_slidervalue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="50"
+            android:shadowColor="@color/neon_acid_green"
+            android:shadowDx="0.0"
+            android:shadowDy="0.0"
+            android:shadowRadius="20"
+            android:textColor="@color/neon_acid_green"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

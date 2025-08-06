@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:forceDarkAllowed="false"
+    android:background="@drawable/border_windowv2"
+    android:paddingStart="3dp"
+    android:paddingEnd="3dp"
+    android:paddingBottom="3dp"
+    tools:context=".Casino"
+    tools:targetApi="q">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/casino_header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextSizeCheck">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:shadowColor="@color/neon_acid_green"
+            android:shadowDx="0.0"
+            android:shadowDy="0.0"
+            android:shadowRadius="15"
+            android:text="@string/games"
+            android:textColor="@color/neon_acid_green"
+            android:fontFamily="@font/gamerock"
+            android:textSize="55sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <TextView
+            android:id="@+id/casino_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/border_money"
+            android:drawablePadding="8dp"
+            android:paddingStart="14dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="14dp"
+            android:paddingBottom="8dp"
+            android:shadowColor="@color/gold_rush"
+            android:shadowDx="0.0"
+            android:shadowDy="0.0"
+            android:shadowRadius="10"
+            android:text=""
+            android:textColor="@color/gold_rush"
+            android:textSize="20sp"
+            android:fontFamily="@font/quickmoney"
+            app:drawableEndCompat="@drawable/image_chips_money"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/deep_blood_red_tlucent"
+        android:orientation="vertical"
+        android:paddingStart="40dp"
+        android:paddingTop="20dp"
+        android:paddingEnd="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/casino_header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="#5470F01F"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="5dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    app:cardBackgroundColor="@color/neon_acid_green"
+                    app:cardCornerRadius="20dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardCornerRadius="20dp">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageButton
+                                android:id="@+id/casino_roulettebtn"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:adjustViewBounds="true"
+                                android:background="@null"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/batman_roulette"
+                                tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|top"
+                                android:fontFamily="@font/casinoshadow"
+                                android:paddingTop="10dp"
+                                android:shadowColor="@color/neon_acid_green"
+                                android:shadowDx="0.0"
+                                android:shadowDy="0.0"
+                                android:shadowRadius="20"
+                                android:text="@string/roulette"
+                                android:textColor="@color/neon_acid_green"
+                                android:textSize="24sp"
+                                android:textStyle="normal"
+                                tools:ignore="TextContrastCheck" />
+                        </FrameLayout>
+                    </androidx.cardview.widget.CardView>
+                </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="#5470F01F"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="5dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    app:cardBackgroundColor="@color/neon_acid_green"
+                    app:cardCornerRadius="20dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardCornerRadius="20dp">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageButton
+                                android:id="@+id/casino_slotsbtn"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:adjustViewBounds="true"
+                                android:background="@null"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/batman_slots"
+                                tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|top"
+                                android:fontFamily="@font/casinoshadow"
+                                android:paddingTop="10dp"
+                                android:shadowColor="@color/neon_acid_green"
+                                android:shadowDx="0.0"
+                                android:shadowDy="0.0"
+                                android:shadowRadius="20"
+                                android:text="@string/slots"
+                                android:textColor="@color/neon_acid_green"
+                                android:textSize="24sp"
+                                tools:ignore="TextContrastCheck" />
+                        </FrameLayout>
+                    </androidx.cardview.widget.CardView>
+                </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="#5470F01F"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="5dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    app:cardBackgroundColor="@color/neon_acid_green"
+                    app:cardCornerRadius="20dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardCornerRadius="20dp">
+
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageButton
+                                android:id="@+id/casino_crashbtn"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:adjustViewBounds="true"
+                                android:background="@null"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/batman_crash"
+                                tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|top"
+                                android:fontFamily="@font/casinoshadow"
+                                android:paddingTop="10dp"
+                                android:shadowColor="@color/neon_acid_green"
+                                android:shadowDx="0.0"
+                                android:shadowDy="0.0"
+                                android:shadowRadius="20"
+                                android:text="@string/crash"
+                                android:textColor="@color/neon_acid_green"
+                                android:textSize="24sp"
+                                tools:ignore="TextContrastCheck" />
+                        </FrameLayout>
+                    </androidx.cardview.widget.CardView>
+                </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="#5470F01F"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="5dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    app:cardBackgroundColor="@color/neon_acid_green"
+                    app:cardCornerRadius="20dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardCornerRadius="20dp">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageButton
+                                android:id="@+id/casino_plinkobtn"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:adjustViewBounds="true"
+                                android:background="@null"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/batman_plinko"
+                                tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|top"
+                                android:fontFamily="@font/casinoshadow"
+                                android:paddingTop="10dp"
+                                android:shadowColor="@color/neon_acid_green"
+                                android:shadowDx="0.0"
+                                android:shadowDy="0.0"
+                                android:shadowRadius="20"
+                                android:text="@string/plinko"
+                                android:textColor="@color/neon_acid_green"
+                                android:textSize="24sp"
+                                tools:ignore="TextContrastCheck" />
+                        </FrameLayout>
+                    </androidx.cardview.widget.CardView>
+                </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="#5470F01F"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="5dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    app:cardBackgroundColor="@color/neon_acid_green"
+                    app:cardCornerRadius="20dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardCornerRadius="20dp">
+
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageButton
+                                android:id="@+id/casino_blackjackbtn"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:adjustViewBounds="true"
+                                android:background="@null"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/batman_blackjack"
+                                tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|top"
+                                android:fontFamily="@font/casinoshadow"
+                                android:paddingTop="10dp"
+                                android:shadowColor="@color/neon_acid_green"
+                                android:shadowDx="0.0"
+                                android:shadowDy="0.0"
+                                android:shadowRadius="20"
+                                android:text="@string/blackjack"
+                                android:textColor="@color/neon_acid_green"
+                                android:textSize="22sp"
+                                tools:ignore="TextContrastCheck" />
+                        </FrameLayout>
+                    </androidx.cardview.widget.CardView>
+                </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="#5470F01F"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="5dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    app:cardBackgroundColor="@color/neon_acid_green"
+                    app:cardCornerRadius="20dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardCornerRadius="20dp">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageButton
+                                android:id="@+id/casino_minesbtn"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:adjustViewBounds="true"
+                                android:background="@null"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/batman_mines"
+                                tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|top"
+                                android:fontFamily="@font/casinoshadow"
+                                android:paddingTop="10dp"
+                                android:shadowColor="@color/neon_acid_green"
+                                android:shadowDx="0.0"
+                                android:shadowDy="0.0"
+                                android:shadowRadius="20"
+                                android:text="@string/mines"
+                                android:textColor="@color/neon_acid_green"
+                                android:textSize="24sp" />
+                        </FrameLayout>
+                    </androidx.cardview.widget.CardView>
+                </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="#5470F01F"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="5dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    app:cardBackgroundColor="@color/neon_acid_green"
+                    app:cardCornerRadius="20dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardCornerRadius="20dp">
+
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageButton
+                                android:id="@+id/casino_dicebtn"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:adjustViewBounds="true"
+                                android:background="@null"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/batman_dice"
+                                tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|top"
+                                android:fontFamily="@font/casinoshadow"
+                                android:paddingTop="10dp"
+                                android:shadowColor="@color/neon_acid_green"
+                                android:shadowDx="0.0"
+                                android:shadowDy="0.0"
+                                android:shadowRadius="20"
+                                android:text="@string/dice"
+                                android:textColor="@color/neon_acid_green"
+                                android:textSize="24sp"
+                                tools:ignore="TextContrastCheck" />
+                        </FrameLayout>
+                    </androidx.cardview.widget.CardView>
+                </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="#5470F01F"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="5dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    app:cardBackgroundColor="@color/neon_acid_green"
+                    app:cardCornerRadius="20dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardCornerRadius="20dp">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageButton
+                                android:id="@+id/casino_dragontowerbtn"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:adjustViewBounds="true"
+                                android:background="@null"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/batman_dragontower"
+                                tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|top"
+                                android:fontFamily="@font/casinoshadow"
+                                android:gravity="center"
+                                android:paddingTop="10dp"
+                                android:shadowColor="@color/neon_acid_green"
+                                android:shadowDx="0.0"
+                                android:shadowDy="0.0"
+                                android:shadowRadius="20"
+                                android:text="@string/dragon_tower"
+                                android:textColor="@color/neon_acid_green"
+                                android:textSize="24sp" />
+                        </FrameLayout>
+                    </androidx.cardview.widget.CardView>
+                </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

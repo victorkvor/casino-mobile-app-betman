@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:forceDarkAllowed="false"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/border_windowv2"
+    android:paddingStart="3dp"
+    android:paddingEnd="3dp"
+    android:paddingBottom="3dp"
+    tools:context=".Slots"
+    tools:targetApi="q">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/slots_header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextSizeCheck">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:shadowColor="@color/neon_acid_green"
+            android:shadowDx="0.0"
+            android:shadowDy="0.0"
+            android:shadowRadius="15"
+            android:text="@string/slots"
+            android:textColor="@color/neon_acid_green"
+            android:fontFamily="@font/gamerock"
+            android:textSize="60sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <TextView
+            android:id="@+id/slots_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/border_money"
+            android:drawablePadding="8dp"
+            android:paddingStart="14dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="14dp"
+            android:paddingBottom="8dp"
+            android:shadowColor="@color/gold_rush"
+            android:shadowDx="0.0"
+            android:shadowDy="0.0"
+            android:shadowRadius="10"
+            android:text=""
+            android:textColor="@color/gold_rush"
+            android:textSize="20sp"
+            android:fontFamily="@font/quickmoney"
+            app:drawableEndCompat="@drawable/image_chips_money"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/slots_betlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/slots_header">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:shadowColor="@color/neon_acid_green"
+            android:shadowDx="0.0"
+            android:shadowDy="0.0"
+            android:shadowRadius="10"
+            android:text="@string/bet_amount"
+            android:textColor="@color/neon_acid_green"
+            android:textSize="20sp"
+            android:fontFamily="@font/gameria" />
+
+        <EditText
+            android:id="@+id/slots_betamount"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:inputType="number"
+            android:text="10"
+            android:textColor="@color/gold_rush"
+            android:background="@drawable/border_spinner"
+            android:fontFamily="@font/quickmoney"
+            android:paddingEnd="14dp"
+            android:paddingStart="14dp"
+            android:shadowColor="@color/gold_rush"
+            android:shadowDx="0.0"
+            android:shadowDy="0.0"
+            android:shadowRadius="10"
+            app:drawableEndCompat="@drawable/image_chips_money"
+            tools:ignore="Autofill,HardcodedText,LabelFor" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/slots_machinelayout"
+        android:layout_width="400dp"
+        android:layout_height="360dp"
+        android:background="@drawable/slot_machine_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/slots_betlayout">
+
+        <!-- Los tres slots -->
+        <LinearLayout
+            android:id="@+id/slots_containerlayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="140dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5">
+
+            <!-- Slot 1 -->
+            <ImageView
+                android:id="@+id/slot1"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/symbol_4"
+                tools:ignore="ContentDescription" />
+
+            <!-- Slot 2 -->
+            <ImageView
+                android:id="@+id/slot2"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="28dp"
+                android:src="@drawable/symbol_4"
+                tools:ignore="ContentDescription" />
+
+            <!-- Slot 3 -->
+            <ImageView
+                android:id="@+id/slot3"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="30dp"
+                android:src="@drawable/symbol_4"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Botón de giro -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/slots_play"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/border_button_glowred"
+        android:fontFamily="@font/playerscollege"
+        android:shadowColor="@color/white"
+        android:shadowDx="0.0"
+        android:shadowDy="0.0"
+        android:shadowRadius="10"
+        android:text="SPIN"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/slots_machinelayout"
+        tools:ignore="HardcodedText,TextContrastCheck" />
+
+    <!-- Texto para el resultado -->
+    <TextView
+        android:id="@+id/slots_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text=""
+        android:textColor="@color/gold_rush"
+        android:shadowColor="@color/gold_rush"
+        android:shadowDx="0.0"
+        android:shadowDy="0.0"
+        android:shadowRadius="10"
+        android:textSize="20sp"
+        android:fontFamily="@font/jackpot"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/slots_play" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

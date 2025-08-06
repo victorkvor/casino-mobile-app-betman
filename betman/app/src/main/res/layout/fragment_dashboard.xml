@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:forceDarkAllowed="false"
+    android:background="@drawable/border_windowv2"
+    android:paddingStart="3dp"
+    android:paddingEnd="3dp"
+    android:paddingBottom="3dp"
+    tools:context=".Dashboard"
+    tools:targetApi="q">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dashboard_rel_header"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextSizeCheck">
+
+        <ImageView
+            android:id="@+id/dashboard_headerimg"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/batman_mainheader"
+            tools:ignore="ContentDescription,VisualLintBounds" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gamerock"
+            android:padding="10dp"
+            android:shadowColor="@color/neon_acid_green"
+            android:shadowDx="0.0"
+            android:shadowDy="0.0"
+            android:shadowRadius="20"
+            android:text="@string/dashboard"
+            android:textColor="@color/neon_acid_green"
+            android:textSize="60sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:shadowColor="@color/neon_acid_green"
+            android:shadowDx="0.0"
+            android:shadowDy="0.0"
+            android:shadowRadius="20"
+            android:text="@string/game"
+            android:textColor="@color/neon_acid_green"
+            android:textSize="56sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:letterSpacing="-0.07"
+            android:shadowColor="@color/neon_acid_green"
+            android:shadowDx="0.0"
+            android:shadowDy="0.0"
+            android:shadowRadius="20"
+            android:text="@string/get_in_the"
+            android:textColor="@color/neon_acid_green"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:translationY="20dp"
+            app:layout_constraintBottom_toTopOf="@id/textView1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:id="@+id/dashboard_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/border_money"
+            android:drawablePadding="8dp"
+            android:paddingStart="14dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="14dp"
+            android:paddingBottom="8dp"
+            android:shadowColor="@color/gold_rush"
+            android:shadowDx="0.0"
+            android:shadowDy="0.0"
+            android:shadowRadius="10"
+            android:text=""
+            android:textColor="@color/gold_rush"
+            android:textSize="20sp"
+            android:fontFamily="@font/quickmoney"
+            app:drawableEndCompat="@drawable/image_chips_money"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/deep_blood_red_tlucent"
+        android:orientation="vertical"
+        android:paddingStart="40dp"
+        android:paddingTop="20dp"
+        android:paddingEnd="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dashboard_rel_header">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="145dp"
+            android:layout_marginBottom="10dp"
+            app:cardBackgroundColor="#5470F01F"
+            app:cardCornerRadius="40dp"
+            app:cardElevation="5dp">
+
+            <androidx.cardview.widget.CardView
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                app:cardBackgroundColor="@color/neon_acid_green"
+                app:cardCornerRadius="40dp">
+
+                <androidx.cardview.widget.CardView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardCornerRadius="40dp">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageButton
+                            android:id="@+id/dashboard_casinobtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            android:background="@null"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/batman_casinobutton"
+                            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|start"
+                            android:fontFamily="@font/casinoshadow"
+                            android:paddingStart="20dp"
+                            android:paddingBottom="10dp"
+                            android:shadowColor="@color/neon_acid_green"
+                            android:shadowDx="0.0"
+                            android:shadowDy="0.0"
+                            android:shadowRadius="20"
+                            android:text="@string/casino"
+                            android:textColor="@color/neon_acid_green"
+                            android:textSize="40sp"
+                            tools:ignore="RtlSymmetry" />
+                    </FrameLayout>
+                </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="145dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="#5470F01F"
+                app:cardCornerRadius="40dp"
+                app:cardElevation="5dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    app:cardBackgroundColor="@color/neon_acid_green"
+                    app:cardCornerRadius="40dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardCornerRadius="40dp">
+
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageButton
+                                android:id="@+id/dashboard_bettingsbtn"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:adjustViewBounds="true"
+                                android:background="@null"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/batman_bettings_button"
+                                tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom|start"
+                                android:fontFamily="@font/batmfa"
+                                android:paddingStart="20dp"
+                                android:paddingBottom="10dp"
+                                android:shadowColor="@color/neon_acid_green"
+                                android:shadowDx="0.0"
+                                android:shadowDy="0.0"
+                                android:shadowRadius="15"
+                                android:text="@string/bets"
+                                android:textColor="@color/neon_acid_green"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                tools:ignore="RtlSymmetry" />
+                        </FrameLayout>
+                    </androidx.cardview.widget.CardView>
+                </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Second CardView for the second ImageButton -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="145dp"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="#5470F01F"
+                app:cardCornerRadius="40dp"
+                app:cardElevation="5dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    app:cardBackgroundColor="@color/neon_acid_green"
+                    app:cardCornerRadius="40dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardCornerRadius="40dp">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageButton
+                                android:id="@+id/dashboard_rankingbtn"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:adjustViewBounds="true"
+                                android:background="@null"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/batman_leaderboard_button"
+                                tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom|start"
+                                android:fontFamily="@font/batmfa"
+                                android:paddingStart="20dp"
+                                android:paddingBottom="10dp"
+                                android:shadowColor="@color/neon_acid_green"
+                                android:shadowDx="0.0"
+                                android:shadowDy="0.0"
+                                android:shadowRadius="15"
+                                android:text="@string/ranking"
+                                android:textColor="@color/neon_acid_green"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                tools:ignore="RtlSymmetry" />
+                        </FrameLayout>
+                    </androidx.cardview.widget.CardView>
+                </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="145dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="#5470F01F"
+                app:cardCornerRadius="40dp"
+                app:cardElevation="5dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    app:cardBackgroundColor="@color/neon_acid_green"
+                    app:cardCornerRadius="40dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardCornerRadius="40dp">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageButton
+                                android:id="@+id/dashboard_bmarketbtn"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:adjustViewBounds="true"
+                                android:background="@null"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/batman_blackmarket"
+                                tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom|start"
+                                android:fontFamily="@font/batmfa"
+                                android:paddingStart="20dp"
+                                android:paddingBottom="10dp"
+                                android:shadowColor="@color/neon_acid_green"
+                                android:shadowDx="0.0"
+                                android:shadowDy="0.0"
+                                android:shadowRadius="15"
+                                android:text="@string/b_market"
+                                android:textColor="@color/neon_acid_green"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                tools:ignore="RtlSymmetry" />
+                        </FrameLayout>
+                    </androidx.cardview.widget.CardView>
+                </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="145dp"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="#5470F01F"
+                app:cardCornerRadius="40dp"
+                app:cardElevation="5dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    app:cardBackgroundColor="@color/neon_acid_green"
+                    app:cardCornerRadius="40dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardCornerRadius="40dp">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageButton
+                                android:id="@+id/dashboard_profilebtn"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:adjustViewBounds="true"
+                                android:background="@null"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/batman_profile"
+                                tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom|start"
+                                android:fontFamily="@font/batmfa"
+                                android:paddingStart="20dp"
+                                android:paddingBottom="10dp"
+                                android:shadowColor="@color/neon_acid_green"
+                                android:shadowDx="0.0"
+                                android:shadowDy="0.0"
+                                android:shadowRadius="15"
+                                android:text="@string/profile"
+                                android:textColor="@color/neon_acid_green"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                tools:ignore="RtlSymmetry" />
+                        </FrameLayout>
+
+                    </androidx.cardview.widget.CardView>
+                </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

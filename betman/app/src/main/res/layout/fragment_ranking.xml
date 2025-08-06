@@ -1,0 +1,708 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/border_windowv2"
+    android:fitsSystemWindows="true"
+    android:forceDarkAllowed="false"
+    android:paddingStart="3dp"
+    android:paddingEnd="3dp"
+    android:paddingBottom="3dp"
+    tools:context=".Ranking"
+    tools:targetApi="q">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/casino_header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextSizeCheck">
+
+        <TextView
+            android:id="@+id/ranking_titletext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/gamerock"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:shadowColor="@color/neon_acid_green"
+            android:shadowDx="0.0"
+            android:shadowDy="0.0"
+            android:shadowRadius="15"
+            android:text="@string/ranking"
+            android:textColor="@color/neon_acid_green"
+            android:textSize="55sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <TextView
+            android:id="@+id/rank_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/border_money"
+            android:drawablePadding="8dp"
+            android:paddingStart="14dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="14dp"
+            android:paddingBottom="8dp"
+            android:shadowColor="@color/gold_rush"
+            android:shadowDx="0.0"
+            android:shadowDy="0.0"
+            android:shadowRadius="10"
+            android:textColor="@color/gold_rush"
+            android:textSize="20sp"
+            android:fontFamily="@font/quickmoney"
+            app:drawableEndCompat="@drawable/image_chips_money"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/deep_blood_red_tlucent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/casino_header">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="380dp"
+            android:layout_height="240dp"
+            tools:ignore="TextSizeCheck">
+
+            <!-- Player ranked third -->
+            <ImageView
+                android:id="@+id/rank_3img"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_marginStart="210dp"
+                android:layout_marginTop="60dp"
+                android:background="@drawable/border_toolbar"
+                android:padding="2dp"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/icon_user" />
+
+            <ImageView
+                android:id="@+id/rank_3crown"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="290dp"
+                android:layout_marginTop="20dp"
+                android:rotation="40"
+                android:src="@drawable/rank3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/rank_3name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/metallic"
+                android:padding="2dp"
+                android:shadowColor="#CD7F32"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10"
+                android:text="JORGE"
+                android:textColor="#CD7F32"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/rank_3img"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/rank_3img"
+                app:layout_constraintTop_toBottomOf="@+id/rank_3img"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/rank_3money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp"
+                android:shadowColor="@color/gold_rush"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10"
+                android:text="33333333"
+                android:textColor="@color/gold_rush"
+                android:textSize="14sp"
+                android:fontFamily="@font/quickmoney"
+                app:drawableEndCompat="@drawable/image_chips_money"
+                app:layout_constraintEnd_toEndOf="@+id/rank_3img"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/rank_3img"
+                app:layout_constraintTop_toBottomOf="@+id/rank_3name"
+                tools:ignore="HardcodedText" />
+
+            <!-- Player ranked second -->
+            <ImageView
+                android:id="@+id/rank_2img"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="210dp"
+                android:background="@drawable/border_toolbar"
+                android:padding="2dp"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/icon_user" />
+
+            <ImageView
+                android:id="@+id/rank_2crown"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="290dp"
+                android:rotation="-40"
+                android:src="@drawable/rank2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/rank_2name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/metallic"
+                android:padding="2dp"
+                android:shadowColor="#C0C0C0"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10"
+                android:text="JORGE"
+                android:textColor="#C0C0C0"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/rank_2img"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/rank_2img"
+                app:layout_constraintTop_toBottomOf="@+id/rank_2img"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/rank_2money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp"
+                android:shadowColor="@color/gold_rush"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10"
+                android:text="33333333"
+                android:textColor="@color/gold_rush"
+                android:fontFamily="@font/quickmoney"
+                android:textSize="14sp"
+                app:drawableEndCompat="@drawable/image_chips_money"
+                app:layout_constraintEnd_toEndOf="@+id/rank_2img"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/rank_2img"
+                app:layout_constraintTop_toBottomOf="@+id/rank_2name"
+                tools:ignore="HardcodedText" />
+
+            <!-- Player ranked first -->
+            <ImageView
+                android:id="@+id/rank_1img"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/border_toolbar"
+                android:padding="2dp"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/icon_user" />
+
+            <ImageView
+                android:id="@+id/rank_1crown"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/rank1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/rank_1name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/metallic"
+                android:padding="2dp"
+                android:shadowColor="#FFD700"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10"
+                android:text="JORGE"
+                android:textColor="#FFD700"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rank_1img"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/rank_1money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp"
+                android:shadowColor="@color/gold_rush"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10"
+                android:text="33333333"
+                android:textColor="@color/gold_rush"
+                android:fontFamily="@font/quickmoney"
+                android:textSize="14sp"
+                app:drawableEndCompat="@drawable/image_chips_money"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rank_1name"
+                tools:ignore="HardcodedText" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/rank_4container"
+            android:layout_width="380dp"
+            android:layout_height="60dp"
+            android:background="@drawable/border_grey_rounded"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="5dp">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/fire_animated" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:gravity="center"
+                    android:shadowColor="@color/neon_acid_green"
+                    android:text="4"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/rank_4img"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:background="@drawable/border_toolbar"
+                android:scaleType="fitXY"
+                android:padding="5dp"
+                tools:src="@drawable/icon_user"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/rank_4name"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"
+                android:shadowColor="@color/neon_acid_green"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10"
+                android:text="JORGE"
+                android:textColor="@color/neon_acid_green"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/rank_4money"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="end"
+                android:shadowColor="@color/gold_rush"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10"
+                android:text="15.36733"
+                android:textColor="@color/gold_rush"
+                android:textSize="20sp"
+                android:fontFamily="@font/quickmoney"
+                app:drawableEndCompat="@drawable/image_chips_money"
+                tools:ignore="HardcodedText,TextSizeCheck" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rank_5container"
+            android:layout_width="380dp"
+            android:layout_height="60dp"
+            android:background="@drawable/border_grey_rounded"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="5dp">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/fire_animated" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:gravity="center"
+                    android:shadowColor="@color/neon_acid_green"
+                    android:shadowDx="0.0"
+                    android:shadowDy="0.0"
+                    android:shadowRadius="10"
+                    android:text="5"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/rank_5img"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:background="@drawable/border_toolbar"
+                android:scaleType="fitXY"
+                android:padding="5dp"
+                tools:src="@drawable/icon_user"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/rank_5name"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"
+                android:shadowColor="@color/neon_acid_green"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10"
+                android:text="JORGE"
+                android:textColor="@color/neon_acid_green"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/rank_5money"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="end"
+                android:shadowColor="@color/gold_rush"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10"
+                android:text="15.36733"
+                android:textColor="@color/gold_rush"
+                android:textSize="20sp"
+                android:fontFamily="@font/quickmoney"
+                app:drawableEndCompat="@drawable/image_chips_money"
+                tools:ignore="HardcodedText,TextSizeCheck" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rank_6container"
+            android:layout_width="380dp"
+            android:layout_height="60dp"
+            android:background="@drawable/border_grey_rounded"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="5dp">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/fire_animated" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:gravity="center"
+                    android:shadowColor="@color/neon_acid_green"
+                    android:text="6"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/rank_6img"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:background="@drawable/border_toolbar"
+                android:scaleType="fitXY"
+                android:padding="5dp"
+                tools:src="@drawable/icon_user"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/rank_6name"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"
+                android:shadowColor="@color/neon_acid_green"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10"
+                android:text="JORGE"
+                android:textColor="@color/neon_acid_green"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/rank_6money"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="end"
+                android:shadowColor="@color/gold_rush"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10"
+                android:text="15.36733"
+                android:textColor="@color/gold_rush"
+                android:textSize="20sp"
+                android:fontFamily="@font/quickmoney"
+                app:drawableEndCompat="@drawable/image_chips_money"
+                tools:ignore="HardcodedText,TextSizeCheck" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rank_7container"
+            android:layout_width="380dp"
+            android:layout_height="60dp"
+            android:background="@drawable/border_grey_rounded"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="5dp">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/fire_animated" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:gravity="center"
+                    android:shadowColor="@color/neon_acid_green"
+                    android:text="7"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/rank_7img"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:background="@drawable/border_toolbar"
+                android:scaleType="fitXY"
+                android:padding="5dp"
+                tools:src="@drawable/icon_user"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/rank_7name"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"
+                android:shadowColor="@color/neon_acid_green"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10"
+                android:text="JORGE"
+                android:textColor="@color/neon_acid_green"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/rank_7money"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="end"
+                android:shadowColor="@color/gold_rush"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10"
+                android:text="15.36733"
+                android:textColor="@color/gold_rush"
+                android:textSize="20sp"
+                android:fontFamily="@font/quickmoney"
+                app:drawableEndCompat="@drawable/image_chips_money"
+                tools:ignore="HardcodedText,TextSizeCheck" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rank_8container"
+            android:layout_width="380dp"
+            android:layout_height="60dp"
+            android:background="@drawable/border_grey_rounded"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="5dp">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/fire_animated" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:gravity="center"
+                    android:shadowColor="@color/neon_acid_green"
+                    android:text="8"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/rank_8img"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:background="@drawable/border_toolbar"
+                android:scaleType="fitXY"
+                android:padding="5dp"
+                tools:src="@drawable/icon_user"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/rank_8name"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"
+                android:shadowColor="@color/neon_acid_green"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10"
+                android:text="JORGE"
+                android:textColor="@color/neon_acid_green"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/rank_8money"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="end"
+                android:shadowColor="@color/gold_rush"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10"
+                android:text="15.36733"
+                android:textColor="@color/gold_rush"
+                android:textSize="20sp"
+                android:fontFamily="@font/quickmoney"
+                app:drawableEndCompat="@drawable/image_chips_money"
+                tools:ignore="HardcodedText,TextSizeCheck" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:forceDarkAllowed="false"
+    android:background="@drawable/border_windowv2"
+    android:paddingStart="3dp"
+    android:paddingEnd="3dp"
+    android:paddingBottom="3dp"
+    tools:context=".Crash"
+    tools:targetApi="q">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/crash_header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextSizeCheck">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:shadowColor="@color/neon_acid_green"
+            android:shadowDx="0.0"
+            android:shadowDy="0.0"
+            android:shadowRadius="15"
+            android:text="@string/crash"
+            android:textColor="@color/neon_acid_green"
+            android:fontFamily="@font/gamerock"
+            android:textSize="60sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <TextView
+            android:id="@+id/crash_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/border_money"
+            android:drawablePadding="8dp"
+            android:paddingStart="14dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="14dp"
+            android:paddingBottom="8dp"
+            android:shadowColor="@color/gold_rush"
+            android:shadowDx="0.0"
+            android:shadowDy="0.0"
+            android:shadowRadius="10"
+            android:text=""
+            android:textColor="@color/gold_rush"
+            android:textSize="20sp"
+            android:fontFamily="@font/quickmoney"
+            app:drawableEndCompat="@drawable/image_chips_money"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/crash_settingslayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/crash_header">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/gameria"
+                android:shadowColor="@color/neon_acid_green"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="20"
+                android:text="@string/bet_amount"
+                android:textColor="@color/neon_acid_green"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/crash_betamount"
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:text="100"
+                android:textColor="@color/gold_rush"
+                android:background="@drawable/border_spinner"
+                android:fontFamily="@font/quickmoney"
+                android:paddingEnd="14dp"
+                android:paddingStart="14dp"
+                android:shadowColor="@color/gold_rush"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10"
+                app:drawableEndCompat="@drawable/image_chips_money"
+                tools:ignore="Autofill,HardcodedText,LabelFor" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:shadowColor="@color/neon_acid_green"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="20"
+                android:text="@string/profit_on_win"
+                android:textColor="@color/neon_acid_green"
+                android:textSize="19sp"
+                android:fontFamily="@font/gameria" />
+
+            <EditText
+                android:id="@+id/crash_earnings"
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+                android:enabled="false"
+                android:gravity="center"
+                android:inputType="none"
+                android:text="200"
+                android:textColor="@color/gold_rush"
+                android:background="@drawable/border_spinnerfill"
+                android:fontFamily="@font/quickmoney"
+                android:paddingEnd="14dp"
+                android:paddingStart="14dp"
+                android:shadowColor="@color/gold_rush"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10"
+                app:drawableEndCompat="@drawable/image_chips_money"
+                tools:ignore="Autofill,HardcodedText,LabelFor" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/crash_settingslayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/crash_settingslayout">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:shadowColor="@color/neon_acid_green"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10"
+                android:text="@string/mult_target"
+                android:textColor="@color/neon_acid_green"
+                android:textSize="20sp"
+                android:fontFamily="@font/gameria" />
+
+            <EditText
+                android:id="@+id/crash_multtarget"
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:inputType="number|numberDecimal"
+                android:text="2"
+                android:textColor="@color/gold_rush"
+                android:background="@drawable/border_spinner"
+                android:fontFamily="@font/quickmoney"
+                android:paddingEnd="14dp"
+                android:paddingStart="14dp"
+                android:shadowColor="@color/gold_rush"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10"
+                tools:ignore="Autofill,HardcodedText,LabelFor" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:shadowColor="@color/neon_acid_green"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10"
+                android:text="@string/win_chance"
+                android:textColor="@color/neon_acid_green"
+                android:textSize="20sp"
+                android:fontFamily="@font/gameria" />
+
+            <EditText
+                android:id="@+id/crash_winchance"
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+                android:enabled="false"
+                android:focusable="false"
+                android:gravity="center"
+                android:inputType="none"
+                android:text="28.33 %"
+                android:textColor="@color/gold_rush"
+                android:background="@drawable/border_spinnerfill"
+                android:fontFamily="@font/quickmoney"
+                android:paddingEnd="14dp"
+                android:paddingStart="14dp"
+                android:shadowColor="@color/gold_rush"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10"
+                tools:ignore="Autofill,HardcodedText,LabelFor" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/crash_play"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/border_button_glowred"
+        android:shadowColor="@color/white"
+        android:shadowDx="0.0"
+        android:shadowDy="0.0"
+        android:shadowRadius="10"
+        android:text="@string/play"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        android:fontFamily="@font/playerscollege"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/crash_settingslayout2"
+        tools:ignore="TextContrastCheck" />
+
+    <com.example.betman.CrashGameView
+        android:id="@+id/crashGameView"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/crash_play"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

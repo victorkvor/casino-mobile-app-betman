@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background (Dark Gray) -->
+    <item android:id="@android:id/background">
+        <shape>
+            <corners android:radius="12dp"/>
+            <solid android:color="#222222"/> <!-- Dark gray for background -->
+        </shape>
+    </item>
+
+    <!-- Progress (Gold Gradient) -->
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <corners android:radius="12dp"/>
+                <gradient
+                    android:startColor="#FFD700"
+                    android:endColor="#FFB300"
+                    android:angle="0"/> <!-- Gold gradient -->
+            </shape>
+        </clip>
+    </item>
+
+    <!-- Secondary Progress (Dimmed Gold for Effect) -->
+    <item android:id="@android:id/secondaryProgress">
+        <clip>
+            <shape>
+                <corners android:radius="12dp"/>
+                <solid android:color="#666222"/> <!-- Dark gold for subtle effect -->
+            </shape>
+        </clip>
+    </item>
+</layer-list>

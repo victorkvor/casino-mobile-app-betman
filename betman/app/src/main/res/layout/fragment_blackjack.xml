@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:forceDarkAllowed="false"
+    android:background="@drawable/border_windowv2"
+    android:paddingStart="3dp"
+    android:paddingEnd="3dp"
+    android:paddingBottom="3dp"
+    tools:context=".Blackjack"
+    tools:ignore="UnusedAttribute">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/blackjack_header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextSizeCheck">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/gamerock"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:shadowColor="@color/neon_acid_green"
+            android:shadowDx="0.0"
+            android:shadowDy="0.0"
+            android:shadowRadius="15"
+            android:text="@string/blackjack"
+            android:textColor="@color/neon_acid_green"
+            android:textSize="60sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <TextView
+            android:id="@+id/blackjack_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/border_money"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/quickmoney"
+            android:paddingStart="14dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="14dp"
+            android:paddingBottom="8dp"
+            android:shadowColor="@color/gold_rush"
+            android:shadowDx="0.0"
+            android:shadowDy="0.0"
+            android:shadowRadius="10"
+            android:text=""
+            android:textColor="@color/gold_rush"
+            android:textSize="20sp"
+            app:drawableEndCompat="@drawable/image_chips_money"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/blackjack_settingslayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/blackjack_header">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:shadowColor="@color/neon_acid_green"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10"
+                android:text="@string/bet_amount"
+                android:textColor="@color/neon_acid_green"
+                android:textSize="20sp"
+                android:fontFamily="@font/gameria" />
+
+            <EditText
+                android:id="@+id/blackjack_betamount"
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:text="10"
+                android:textColor="@color/gold_rush"
+                android:background="@drawable/border_spinner"
+                android:fontFamily="@font/quickmoney"
+                android:paddingEnd="14dp"
+                android:paddingStart="14dp"
+                android:shadowColor="@color/gold_rush"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10"
+                app:drawableEndCompat="@drawable/image_chips_money"
+                tools:ignore="Autofill,HardcodedText,LabelFor" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/blackjack_play"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/border_button_glowred"
+            android:shadowColor="@color/white"
+            android:shadowDx="0.0"
+            android:shadowDy="0.0"
+            android:shadowRadius="10"
+            android:text="@string/play"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            android:fontFamily="@font/playerscollege"
+            tools:ignore="TextContrastCheck" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/batman_pokertable"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/blackjack_settingslayout"
+        tools:ignore="VisualLintBounds">
+
+        <ImageView
+            android:id="@+id/blackjack_dealer"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="135dp"
+            android:src="@drawable/batman_dealer"
+            tools:ignore="ContentDescription"/>
+
+        <TextView
+            android:id="@+id/blackjack_dealerscore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:shadowColor="@color/neon_acid_green"
+            android:shadowDx="0.0"
+            android:shadowDy="0.0"
+            android:shadowRadius="20"
+            android:text="@string/dealer_s_score_0"
+            android:textColor="@color/neon_acid_green"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="69dp"
+                android:layout_height="94dp"
+                android:padding="4dp"
+                app:cardBackgroundColor="#FFEC8A"
+                app:cardCornerRadius="4dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="65dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center"
+                    android:padding="2dp"
+                    app:cardBackgroundColor="#00FFFFFF"
+                    app:cardCornerRadius="4dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/batman_pokertable"
+                        tools:ignore="ContentDescription" />
+
+                    <ImageView
+                        android:id="@+id/blackjack_casino_card1"
+                        android:layout_width="65dp"
+                        android:layout_height="90dp"
+                        android:src="@drawable/card_back"
+                        android:visibility="gone"
+                        tools:ignore="ContentDescription"/>
+                </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="69dp"
+                android:layout_height="94dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:padding="4dp"
+                app:cardBackgroundColor="#FFEC8A"
+                app:cardCornerRadius="4dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="65dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center"
+                    android:padding="2dp"
+                    app:cardBackgroundColor="#00FFFFFF"
+                    app:cardCornerRadius="4dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/batman_pokertable"
+                        tools:ignore="ContentDescription" />
+
+                    <ImageView
+                        android:id="@+id/blackjack_casino_card2"
+                        android:layout_width="65dp"
+                        android:layout_height="90dp"
+                        android:src="@drawable/card_back"
+                        android:visibility="gone"
+                        tools:ignore="ContentDescription"/>
+                </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="69dp"
+                android:layout_height="94dp"
+                android:padding="4dp"
+                app:cardBackgroundColor="#FFEC8A"
+                app:cardCornerRadius="4dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="65dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center"
+                    android:padding="2dp"
+                    app:cardBackgroundColor="#00FFFFFF"
+                    app:cardCornerRadius="4dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/batman_pokertable"
+                        tools:ignore="ContentDescription" />
+
+                    <ImageView
+                        android:id="@+id/blackjack_casino_card3"
+                        android:layout_width="65dp"
+                        android:layout_height="90dp"
+                        android:src="@drawable/card_back"
+                        android:visibility="gone"
+                        tools:ignore="ContentDescription"/>
+                </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="69dp"
+                android:layout_height="94dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:padding="4dp"
+                app:cardBackgroundColor="#FFEC8A"
+                app:cardCornerRadius="4dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="65dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center"
+                    android:padding="2dp"
+                    app:cardBackgroundColor="#00FFFFFF"
+                    app:cardCornerRadius="4dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/batman_pokertable"
+                        tools:ignore="ContentDescription"/>
+
+                    <ImageView
+                        android:id="@+id/blackjack_casino_card4"
+                        android:layout_width="65dp"
+                        android:layout_height="90dp"
+                        android:src="@drawable/card_back"
+                        android:visibility="gone"
+                        tools:ignore="ContentDescription"/>
+                </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="69dp"
+                android:layout_height="94dp"
+                android:padding="4dp"
+                app:cardBackgroundColor="#FFEC8A"
+                app:cardCornerRadius="4dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="65dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center"
+                    android:padding="2dp"
+                    app:cardBackgroundColor="#00FFFFFF"
+                    app:cardCornerRadius="4dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/batman_pokertable"
+                        tools:ignore="ContentDescription"/>
+
+                    <ImageView
+                        android:id="@+id/blackjack_casino_card5"
+                        android:layout_width="65dp"
+                        android:layout_height="90dp"
+                        android:src="@drawable/card_back"
+                        android:visibility="gone"
+                        tools:ignore="ContentDescription"/>
+                </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/blackjack_playerscore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:shadowColor="@color/neon_acid_green"
+            android:shadowDx="0.0"
+            android:shadowDy="0.0"
+            android:shadowRadius="20"
+            android:text="@string/player_s_score_0"
+            android:textColor="@color/neon_acid_green"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="69dp"
+                android:layout_height="94dp"
+                android:padding="2dp"
+                app:cardBackgroundColor="#FFEC8A"
+                app:cardCornerRadius="4dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="65dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center"
+                    android:padding="4dp"
+                    app:cardBackgroundColor="#00FFFFFF"
+                    app:cardCornerRadius="4dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/batman_pokertable"
+                        tools:ignore="ContentDescription,ImageContrastCheck" />
+
+                    <ImageView
+                        android:id="@+id/blackjack_player_card1"
+                        android:layout_width="65dp"
+                        android:layout_height="90dp"
+                        android:src="@drawable/card_back"
+                        android:visibility="gone"
+                        tools:ignore="ContentDescription"/>
+                </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="69dp"
+                android:layout_height="94dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="5dp"
+                android:padding="4dp"
+                app:cardBackgroundColor="#FFEC8A"
+                app:cardCornerRadius="4dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="65dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center"
+                    android:padding="2dp"
+                    app:cardBackgroundColor="#00FFFFFF"
+                    app:cardCornerRadius="4dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/batman_pokertable"
+                        tools:ignore="ContentDescription,ImageContrastCheck" />
+
+                    <ImageView
+                        android:id="@+id/blackjack_player_card2"
+                        android:layout_width="65dp"
+                        android:layout_height="90dp"
+                        android:src="@drawable/card_back"
+                        android:visibility="gone"
+                        tools:ignore="ContentDescription"/>
+                </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="69dp"
+                android:layout_height="94dp"
+                android:layout_marginTop="80dp"
+                android:padding="4dp"
+                app:cardBackgroundColor="#FFEC8A"
+                app:cardCornerRadius="4dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="65dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center"
+                    android:padding="2dp"
+                    app:cardBackgroundColor="#00FFFFFF"
+                    app:cardCornerRadius="4dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/batman_pokertable"
+                        tools:ignore="ContentDescription"/>
+
+                    <ImageView
+                        android:id="@+id/blackjack_player_card3"
+                        android:layout_width="65dp"
+                        android:layout_height="90dp"
+                        android:src="@drawable/card_back"
+                        android:visibility="gone"
+                        tools:ignore="ContentDescription"/>
+                </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="69dp"
+                android:layout_height="94dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="5dp"
+                android:padding="4dp"
+                app:cardBackgroundColor="#FFEC8A"
+                app:cardCornerRadius="4dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="65dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center"
+                    android:padding="2dp"
+                    app:cardBackgroundColor="#00FFFFFF"
+                    app:cardCornerRadius="4dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/batman_pokertable"
+                        tools:ignore="ContentDescription"/>
+
+                    <ImageView
+                        android:id="@+id/blackjack_player_card4"
+                        android:layout_width="65dp"
+                        android:layout_height="90dp"
+                        android:src="@drawable/card_back"
+                        android:visibility="gone"
+                        tools:ignore="ContentDescription"/>
+                </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="69dp"
+                android:layout_height="94dp"
+                android:padding="4dp"
+                app:cardBackgroundColor="#FFEC8A"
+                app:cardCornerRadius="4dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="65dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center"
+                    android:padding="2dp"
+                    app:cardBackgroundColor="#00FFFFFF"
+                    app:cardCornerRadius="4dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/batman_pokertable"
+                        tools:ignore="ContentDescription,ImageContrastCheck" />
+
+                    <ImageView
+                        android:id="@+id/blackjack_player_card5"
+                        android:layout_width="65dp"
+                        android:layout_height="90dp"
+                        android:src="@drawable/card_back"
+                        android:visibility="gone"
+                        tools:ignore="ContentDescription"/>
+                </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/blackjack_hit"
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/border_button_glowred"
+                android:shadowColor="@color/white"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10"
+                android:text="@string/hit"
+                android:textColor="@color/white"
+                android:textSize="26sp"
+                android:fontFamily="@font/playerscollege" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/blackjack_stand"
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/border_button_glowred"
+                android:shadowColor="@color/white"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="10"
+                android:text="@string/stand"
+                android:textColor="@color/white"
+                android:textSize="26sp"
+                android:fontFamily="@font/playerscollege"
+                tools:ignore="VisualLintBounds" />
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

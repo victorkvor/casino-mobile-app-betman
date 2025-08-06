@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Betman</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="username">USERNAME</string>
+    <string name="password">PASSWORD</string>
+    <string name="marvel_intro_page">Marvel Intro Page</string>
+    <string name="transparent_overlay">Transparent Overlay</string>
+    <string name="marvel_logo">Marvel Logo</string>
+    <string name="dd_mm_yyyy">DD/MM/YYYY</string>
+    <string name="other_casinos">OTHER CASINOS</string>
+    <string name="casino">CASINO</string>
+    <string name="bets">BETS</string>
+    <string name="b_market">B-MARKET</string>
+    <string name="player_s_score_0">PLAYER\'s SCORE - 0</string>
+    <string name="hit">HIT</string>
+    <string name="stand">STAND</string>
+    <string name="play">PLAY</string>
+    <string name="blackjack">BLACKJACK</string>
+    <string name="bet_amount">BET AMOUNT</string>
+    <string name="dealer_s_score_0">DEALER\'s SCORE - 0</string>
+    <string name="roulette">ROULETTE</string>
+    <string name="slots">SLOTS</string>
+    <string name="crash">CRASH</string>
+    <string name="plinko">PLINKO</string>
+    <string name="mines">MINES</string>
+    <string name="dice">DICE</string>
+    <string name="dragon_tower">DRAGON TOWER</string>
+    <string name="games">GAMES</string>
+    <string name="multiplier">MULTIPLIER</string>
+    <string name="profit_on_win">PROFIT ON WIN</string>
+    <string name="win_chance">WIN CHANCE</string>
+    <string name="dashboard">DASHBOARD</string>
+    <string name="game">GAME.</string>
+    <string name="get_in_the">GET IN THE</string>
+    <string name="ranking">RANKING</string>
+    <string name="profile">PROFILE</string>
+    <string name="mult_target">MULT. TARGET</string>
+    <string name="amount">AMOUNT</string>
+    <string name="earnings">EARNINGS</string>
+    <string name="difficulty">DIFFICULTY</string>
+    <string name="profit">PROFIT</string>
+</resources>

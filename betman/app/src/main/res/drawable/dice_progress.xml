@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Borde exterior grueso #2f4553 -->
+    <item>
+        <shape android:shape="rectangle">
+            <stroke
+                android:width="10dp"
+                android:color="#2f4553"/>
+            <corners android:radius="20dp"/>
+            <solid android:color="@android:color/transparent"/>
+        </shape>
+    </item>
+
+    <!-- Borde transparente interno -->
+    <item android:left="3dp" android:right="3dp" android:top="3dp" android:bottom="3dp">
+        <shape android:shape="rectangle">
+            <stroke
+                android:width="2dp"
+                android:color="#202f4553"/> <!-- 20% de opacidad -->
+            <corners android:radius="16dp"/>
+            <solid android:color="@android:color/transparent"/>
+        </shape>
+    </item>
+
+    <!-- Fondo verde (derecha del thumb) -->
+    <item android:id="@android:id/background"
+        android:left="6dp" android:right="6dp" android:top="6dp" android:bottom="6dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="12dp"/>
+            <solid android:color="#00E701"/>
+        </shape>
+    </item>
+
+    <!-- Progreso rojo (izquierda del thumb) -->
+    <item android:id="@android:id/progress"
+        android:left="6dp" android:right="6dp" android:top="6dp" android:bottom="6dp">
+        <scale android:scaleWidth="100%">
+            <shape android:shape="rectangle">
+                <corners android:radius="12dp"/>
+                <solid android:color="#E9113C"/>
+            </shape>
+        </scale>
+    </item>
+
+</layer-list>
