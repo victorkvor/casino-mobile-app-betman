@@ -169,13 +169,13 @@ If you don't want to build the app, you can [**download the APK directly**](http
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### 🧱 App Screens <a id="screens"></a>
+## 🧱 App Screens <a id="screens"></a>
 
 This section describes the main screens and features of **Betman**, along with their visual and functional elements.
 
 ---
 
-#### 🔔 Notifications <a id="notifications"></a>
+### 🔔 Notifications <a id="notifications"></a>
 
 The app is designed to generate a **random notification every hour** from the following list of possible notification messages:
 
@@ -201,7 +201,7 @@ The app is designed to generate a **random notification every hour** from the fo
 
 ---
 
-#### 🔐 Login <a id="login"></a>
+### 🔐 Login <a id="login"></a>
 
 The login screen is preceded by an animated splash screen inspired by the **Marvel Comics intro**.
 The login logic is based on the following flow:
@@ -219,7 +219,7 @@ The login logic is based on the following flow:
 
 ---
 
-##### 🏠 Dashboard <a id="dashboard"></a>
+#### 🏠 Dashboard <a id="dashboard"></a>
 
 This is the main panel after logging in, where you can navigate to other app screens:
 - 🎰 **Casino** game modes.
@@ -234,7 +234,7 @@ This is the main panel after logging in, where you can navigate to other app scr
 
 ---
 
-###### 🕹️ Casino: Game Modes <a id="game-modes"></a>
+##### 🕹️ Casino: Game Modes <a id="game-modes"></a>
 
 <div align="center"><img src="images/games.jpg" width="300" alt="games"></div>
 
@@ -279,7 +279,7 @@ The following gambling games are available within the in-app **casino**, each wi
 
 ---
 
-###### 🎰 Bets <a id="bets"></a>
+##### 🎰 Bets <a id="bets"></a>
 
 A full history of:
 - All games played by users within the casino.
@@ -295,7 +295,7 @@ A full history of:
 
 ---
 
-###### 🏆 Ranking <a id="ranking"></a>
+##### 🏆 Ranking <a id="ranking"></a>
 
 Displays the **top 8 users** who have won the most amount of chips in the casino.
 
@@ -305,7 +305,7 @@ Displays the **top 8 users** who have won the most amount of chips in the casino
 
 ---
 
-###### 🏴‍☠️ Black Market <a id="black-market"></a>
+##### 🏴‍☠️ Black Market <a id="black-market"></a>
 
 A fictional black market where players can "buy" chips to continue betting.
 
@@ -318,7 +318,7 @@ A fictional black market where players can "buy" chips to continue betting.
 
 ---
 
-###### 🪪 Profile <a id="profile"></a>
+##### 🪪 Profile <a id="profile"></a>
 
 The user's personal stats and information, including:
 - Current **ranking** in the casino.
