@@ -388,7 +388,7 @@ Project Link: [https://github.com/victorkvor/casino-mobile-app-betman](https://g
 [license-url]: https://github.com/victorkvor/casino-mobile-app-betman/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/victorkvor
-[kotlin-shield]: https://img.shields.io/badge/-Kotlin-7F52FF?style=flat&logo=kotlin&logoColor=white
+[kotlin-shield]: https://img.shields.io/badge/-Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white
 [kotlin-url]: https://kotlinlang.org
 [android-studio-shield]: https://img.shields.io/badge/android%20studio-346ac1?style=for-the-badge&logo=android%20studio&logoColor=white
 [android-studio-url]: https://developer.android.com/studio
