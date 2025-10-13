@@ -123,8 +123,7 @@ If you want to modify or build upon this project, you will need Android Studio, 
 |----------------|---------------------------------------------|--------------------------------------------------------------------|
 | **OS**         | Windows 10 (64-bit)                         | Latest 64-bit Windows version                                      |
 | **RAM**        | 8 GB (Studio) / 16 GB (with Emulator)       | 32 GB                                                              |
-| **CPU**        | Virtualization support (VT-x / AMD-V)       | Latest Intel i5/i7/i9 or AMD Ryzen 5/7/9 (no N/U-series CPUs)      |
-|                | Intel 8th Gen or AMD Zen (2017+)            |                                                                    |
+| **CPU**        | Virtualization support (VT-x / AMD-V)<br>  Intel 8th Gen or AMD Zen (2017+) | Latest Intel i5/i7/i9 or AMD Ryzen 5/7/9 (no N/U-series CPUs)      |
 | **Disk Space** | 16 GB (Studio + Emulator)                   | SSD with at least 32 GB free                                       |
 | **Resolution** | 1280 × 800                                  | 1920 × 1080                                                        |
 | **GPU**        | 4 GB VRAM (e.g., GeForce 10 / RX 5000+)     | 8 GB VRAM (e.g., GeForce 20+ / RX 6600+) with updated drivers      |
